@@ -1,0 +1,19 @@
+/* roots */
+:root {
+  --main-color: #14274a;
+  --second-color: #e0b973;
+  --gray-color: #aaa;
+  --text-color: #ffffff;
+}
+/* varaibles */
+* {
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
