@@ -18,3 +18,336 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+section:not(:first-child) {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.sect-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.sub-title {
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--main-color);
+}
+.btn {
+  cursor: pointer;
+  width: 9rem;
+  height: 2.3rem;
+  background-color: var(--second-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 7px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .sect-title {
+    font-size: 1.3rem;
+  }
+  .sub-title {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+/* End varaibles */
+
+/* Contianer  */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+}
+@media (min-width: 370px) {
+  .container {
+    width: 320px;
+  }
+}
+@media (min-width: 550px) {
+  .container {
+    width: 530px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+}
+/* End Contianer 
+
+/*-- header ---*/
+.header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0 1rem;
+  z-index: 1000;
+}
+.logo {
+  font-family: "EB Garamond", serif;
+  width: 186px;
+  height: 60px;
+  background-color: var(--second-color);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 1rem 10px 1.4rem;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+.logo span {
+  font-size: 15px;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  margin-right: 3rem;
+}
+.active {
+  font-weight: 600;
+}
+.active::before,
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  width: 0;
+  transform: translateX(-3px);
+  height: 2px;
+  background-color: var(--text-color);
+  transition: 0.3s;
+  margin: auto;
+}
+.active::before,
+nav ul li a:hover::before {
+  width: calc(100% + 6px);
+}
+/* --- Responsive NAVBAR  */
+.nav-close,
+.nav-list {
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 768px) {
+  .logo {
+    font-family: "EB Garamond", serif;
+    width: 146px;
+    height: 50px;
+    font-size: 25px;
+    padding: 1rem 7px 1.4rem;
+  }
+  .logo span {
+    font-size: 12px;
+  }
+  .nav-close,
+  .nav-list {
+    display: block;
+    width: 1rem;
+    color: var(--text-color);
+  }
+  .nav-list i {
+    font-size: 1.5rem;
+  }
+  nav {
+    height: 100vh;
+    line-height: 3rem;
+    position: fixed;
+    padding: 0rem 4rem 0rem 2rem;
+    top: 0;
+    right: -18rem;
+    background-color: #14274ad5;
+    border: solid 1px var(--second-color);
+    border-top: none;
+    border-right: none;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li a {
+    color: rgb(46, 46, 46);
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-left: 2rem;
+  }
+}
+/* End of header  */
+
+/* ----------- Sections ----------*/
+/* home */
+.home-main {
+  height: 100vh;
+  background: url(../images/homeBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  align-items: center;
+}
+.home-main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #14274a94;
+}
+.home-main .container {
+  z-index: 1;
+}
+.main-text {
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+.main-text h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.main-text > div {
+  font-family: "EB Garamond", serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 90px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+.main-text > div span {
+  font-size: 30px;
+  letter-spacing: 8px;
+}
+.main-text p {
+  text-transform: lowercase;
+  width: 480px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+.home-main button {
+  margin-top: 1rem;
+  position: absolute;
+  left: calc(50% - 4rem);
+  margin-top: 4rem;
+}
+
+/* responsive  */
+@media (max-width: 768px) {
+  .main-text h2 {
+    font-size: 20px;
+  }
+  .main-text > div {
+    font-size: 60px;
+    letter-spacing: 4px;
+  }
+  .main-text > div span {
+    font-size: 20px;
+    letter-spacing: 8px;
+  }
+  .main-text p {
+    width: 350px;
+  }
+}
+@media (max-width: 370px) {
+  .main-text h2 {
+    font-size: 15px;
+  }
+  .main-text > div {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+  .main-text > div span {
+    font-size: 14px;
+    letter-spacing: 8px;
+  }
+  .main-text p {
+    width: 250px;
+  }
+}
+/* End home */
+/*----- home services -----*/
+.home-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+.home-service-text {
+  flex-basis: 35%;
+  text-align: left;
+  position: relative;
+}
+.home-service-text::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  bottom: 0;
+  height: 90%;
+  width: 2px;
+  background-color: var(--second-color);
+}
+.home-service-text p {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+.home-service-img {
+  flex-basis: 50%;
+  overflow: hidden;
+}
+.home-service-img img {
+  width: 90%;
+  height: 80%;
+}
+/* responsive  */
+@media (max-width: 768px) {
+  .home-service {
+    text-align: center;
+    flex-direction: column;
+  }
+  .home-service-text {
+    text-align: center;
+  }
+  .home-service-img {
+    margin-top: 1rem;
+  }
+}
+/*----- End home services -----*/
