@@ -245,7 +245,7 @@ nav ul li a:hover::before {
   font-size: 30px;
   font-weight: 400;
 }
-.main-text > div {
+.luxury {
   font-family: "EB Garamond", serif;
   display: flex;
   flex-direction: column;
@@ -253,7 +253,7 @@ nav ul li a:hover::before {
   font-weight: 600;
   letter-spacing: 4px;
 }
-.main-text > div span {
+.luxury span {
   font-size: 30px;
   letter-spacing: 8px;
 }
@@ -351,3 +351,106 @@ nav ul li a:hover::before {
   }
 }
 /*----- End home services -----*/
+/*----- Footer -----*/
+footer {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  padding: 2rem 0;
+  position: relative;
+  margin-top: 5rem;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: calc(50% - 40px);
+  border: solid 40px;
+  border-color: transparent transparent var(--main-color) transparent;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .hotel-info {
+  flex-basis: 20%;
+}
+footer .hotel-info .luxury {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+footer .hotel-info .luxury span {
+  font-size: 12px;
+  font-weight: 400;
+}
+footer .hotel-info .info-text h3 {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.mid-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: 50%;
+}
+.hotel-contact ul a,
+.hotel-social ul a {
+  text-decoration: none;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+.hotel-social ul a {
+  display: flex;
+  align-items: center;
+}
+.hotel-social ul a i {
+  margin-right: 1rem;
+}
+.hotel-subscribe {
+  font-size: 12px;
+}
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.subscribe-btn input {
+  height: 2.2rem;
+  width: 13rem;
+  border: 1px solid var(--second-color);
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 0 5px;
+}
+.subscribe-btn input::placeholder {
+  color: var(--text-color);
+}
+.subscribe-btn button {
+  width: 4rem;
+  border-radius: 0;
+  margin: 0;
+}
+/* responsive  */
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mid-footer {
+    margin: 1rem 0;
+  }
+  .hotel-contact {
+    transform: translateX(-15px);
+  }
+  .hotel-social ul a i {
+    margin-right: 7px;
+  }
+  .subscribe-btn input {
+    width: 10rem;
+  }
+  .subscribe-btn button {
+    width: 3rem;
+  }
+}
